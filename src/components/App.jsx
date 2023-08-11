@@ -1,16 +1,27 @@
-export const App = () => {
+import Profile from './Profile/profile';
+import Statistics from './Statistics/statistics';
+import user from 'dataJSON/user.json';
+import data from 'dataJSON/data.json';
+import GlobalStyles from './GlobalStyles';
+import friends from 'dataJSON/friends.json';
+import FriendList from './FriendList/friendList';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import transactions from 'dataJSON/transactions.json';
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
+      <GlobalStyles />
     </div>
   );
-};
+}
