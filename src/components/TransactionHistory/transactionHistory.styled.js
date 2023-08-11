@@ -7,6 +7,7 @@ export const Table = styled.table`
   margin: auto;
   border-radius: 5px;
   padding-top: 20px;
+  border-collapse: collapse;
 `;
 
 export const HeaderRow = styled.tr`
