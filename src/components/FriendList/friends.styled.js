@@ -13,7 +13,12 @@ export const MyFriend = styled.li`
 
   padding: 20px;
   align-items: center;
-  background-color: ${props => (props.even ? '#bebebe20' : '#bebebe50')};
+  &:nth-child(odd) {
+    background-color: #bebebe50;
+  }
+  &:nth-child(even) {
+    background-color: #bebebe20;
+  }
   font-weight: bold;
   font-size: 17px;
   color: #080808;
