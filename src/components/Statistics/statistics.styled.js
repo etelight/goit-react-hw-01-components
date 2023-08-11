@@ -31,6 +31,11 @@ export const StatItem = styled.li`
 
 export const Label = styled.span`
   color: #080808;
-  font-weight: bold;
   font-size: 17px;
+`;
+export const LabelPerc = styled.span`
+  margin-top: 8px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 20px;
 `;
