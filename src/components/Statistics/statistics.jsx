@@ -10,7 +10,7 @@ const Statistics = ({ title, stats }) => {
         {stats.map(({ id, label, percentage }, index) => (
           <StatItem key={id} even={index % 2 === 0}>
             <Label>{label}</Label>
-            <Label>{percentage}</Label>
+            <Label>{percentage}%</Label>
           </StatItem>
         ))}
       </StatList>
